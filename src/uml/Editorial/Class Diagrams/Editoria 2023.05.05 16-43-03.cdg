@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Editoria">
+  <ClassDiagramComponents>
+    <Class name="CD" package="editorial" visibility="public" xPosition="65.0" yPosition="341.0">
+      <Fields>
+        <Field name="tiempoMinutos" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="titulo"/>
+          <Argument type="double" name="precio"/>
+          <Argument type="double" name="tiempoMinutos"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getTiempoMinutos" returnType="double" visibility="public"/>
+        <Method name="setTiempoMinutos" returnType="void" visibility="public">
+          <Argument type="double" name="tiempoMinutos"/>
+        </Method>
+        <Method name="getTitulo" returnType="String" visibility="public"/>
+        <Method name="setTitulo" returnType="void" visibility="public">
+          <Argument type="String" name="titulo"/>
+        </Method>
+        <Method name="getPrecio" returnType="double" visibility="public"/>
+        <Method name="setPrecio" returnType="void" visibility="public">
+          <Argument type="double" name="precio"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Libro" package="editorial" visibility="public" xPosition="736.0" yPosition="341.0">
+      <Fields>
+        <Field name="numPaginas" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="titulo"/>
+          <Argument type="double" name="precio"/>
+          <Argument type="int" name="numPaginas"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNumPaginas" returnType="int" visibility="public"/>
+        <Method name="setNumPaginas" returnType="void" visibility="public">
+          <Argument type="int" name="numPaginas"/>
+        </Method>
+        <Method name="getTitulo" returnType="String" visibility="public"/>
+        <Method name="setTitulo" returnType="void" visibility="public">
+          <Argument type="String" name="titulo"/>
+        </Method>
+        <Method name="getPrecio" returnType="double" visibility="public"/>
+        <Method name="setPrecio" returnType="void" visibility="public">
+          <Argument type="double" name="precio"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Publicacion" package="editorial" visibility="public" xPosition="395.0" yPosition="58.0">
+      <Fields>
+        <Field name="titulo" type="String" visibility="protected"/>
+        <Field name="precio" type="double" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="titulo"/>
+          <Argument type="double" name="precio"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="editorial.Libro" target="editorial.Publicacion"/>
+    <IsRelation name="is" source="editorial.CD" target="editorial.Publicacion"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
